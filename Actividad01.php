@@ -17,21 +17,21 @@
 $i = 0;
 
 do{
-    echo "<div style='background-color: rgb(0,".$i.",0)'>0,".$i.",0</div>";
+    echo "<div style='background-color: rgb(0,$i,0)'>0,$i,0</div>";
     ++$i;
 } while ($i <= 255);
 
 $i = 0;
 
 do{
-    echo "<div style='background-color: rgb(".$i.",0,0)'>".$i.",0,0</div>";
+    echo "<div style='background-color: rgb($i,0,0)'>$i,0,0</div>";
     ++$i;
 } while ($i <= 255);
 
 $i = 0;
 
 do{
-    echo "<div style='background-color: rgb(0,0,".$i.")'>0,0,".$i."</div>";
+    echo "<div style='background-color: rgb(0,0,$i)'>0,0,$i</div>";
     ++$i;
 } while ($i <= 255);
 
@@ -39,7 +39,7 @@ $i = 0;
 $j = 0;
 
 while ($i <= 255 && $i <= 255){
-    echo "<div style='background-color: rgb(0,".$i.",".$j.")'>0,".$i.",".$j."</div>";
+    echo "<div style='background-color: rgb(0,$i,$j)'>0,$i,$j</div>";
     ++$i;
     ++$j;
 }
@@ -48,7 +48,7 @@ $i = 0;
 $j = 0;
 
 while ($i <= 255 && $i <= 255){
-    echo "<div style='background-color: rgb(".$j.",".$i.",0)'>".$j.",".$i.",0</div>";
+    echo "<div style='background-color: rgb($j,$i,0)'>$j,$i,0</div>";
     ++$i;
     ++$j;
 }
@@ -57,7 +57,7 @@ $i = 0;
 $j = 0;
 
 while ($i <= 255 && $i <= 255){
-    echo "<div style='background-color: rgb(".$j.",0,".$i.")'>".$j.",0,".$i."</div>";
+    echo "<div style='background-color: rgb($j,0,$i)'>$j,0,$i</div>";
     ++$i;
     ++$j;
 }
@@ -67,7 +67,7 @@ $j = 0;
 $k = 0;
 
 while ($i <= 255 && $i <= 255){
-    echo "<div style='background-color: rgb(".$j.",".$k.",".$i.")'>".$j.",".$k.",".$i."</div>";
+    echo "<div style='background-color: rgb($j,$k,$i)'>$j,$k,$i</div>";
     ++$i;
     ++$j;
     ++$k;
