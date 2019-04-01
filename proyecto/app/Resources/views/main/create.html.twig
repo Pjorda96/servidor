@@ -1,0 +1,47 @@
+{#{% form_theme form 'bootstrap_4_layout.html.twig' %}#}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card card-signin my-5">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Entrar</h5>
+                        {#<form class="form-signin">#}
+                        <div class="form-signin">
+                            {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+
+                            <div class="form-label-group">
+                                {{ form_label(form.nombre) }}
+                                {{ form_errors(form.nombre) }}
+                                {{ form_widget(form.nombre, {'attr': {'required': 'required'}}) }}
+                            </div>
+
+                            <div class="form-label-group">
+                                {{ form_label(form.cantidad) }}
+                                {{ form_errors(form.cantidad) }}
+                                {{ form_widget(form.cantidad, {'attr': {'required': 'required'}}) }}
+                            </div>
+
+                            <div class="form-label-group">
+                                {{ form_label(form.descripcion) }}
+                                {{ form_errors(form.descripcion) }}
+                                {{ form_widget(form.descripcion, {'attr': {'required': 'required'}}) }}
+                            </div>
+
+                            {{ form_widget(form.Enviar, {'attr': {'class': 'btn btn-lg btn-primary btn-block text-uppercase'}}) }}
+
+                            {{ form_end(form) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+{% endblock %}

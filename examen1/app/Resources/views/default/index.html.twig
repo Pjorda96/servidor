@@ -1,0 +1,7 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% for usuario in usuarios %}
+        {{ usuario.id }}. <a href="{{ path('detalle', {'id': usuario.id}) }}">{{ usuario.nombre }}</a><br>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ producto.nombre }}{% endblock %}
+
+{% block body %}
+    <h3>Hola {{ producto.nombre }}</h3>
+
+    <p>{{ producto.nombre }} {{ producto.descripcion }} {{ producto.cantidad }}</p>
+
+    <button onclick="location.href='{{ path('update', {'id': producto.id}) }}'">Modificar</button>
+    <button onclick="location.href='{{ path('delete', {'id': producto.id}) }}'">Borrar</button>
+{% endblock %}

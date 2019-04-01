@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <ol>
+        {% for producto in productos %}
+            <li><a href="{{ path('detalle', {'id': producto.id}) }}">{{ producto.nombre }} {{ producto.descripcion }} {{ producto.cantidad }}</a></li>
+        {% endfor %}
+    </ol>
+
+    <button onclick="location.href='{{ path('create') }}'">Nuevo</button>
+{% endblock %}
