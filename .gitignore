@@ -1,5 +1,5 @@
 .idea
 .git
 proyecto/node_modules/*
-proyecto/var/*
 proyecto/vendor/*
+proyecto/var/*

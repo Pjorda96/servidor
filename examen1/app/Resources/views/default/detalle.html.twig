@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h3>Hola {{ usuario.nombre }}</h3>
+
+    {{ usuario.id }}. <br>
+    {{ usuario.nombre }} {{ usuario.apellidos }} <br>
+    {{ usuario.edad }} <br>
+    {{ usuario.DNI }} <br>
+    {{ usuario.cargo }} <br>
+    {{ usuario.telefono }}
+{% endblock %}

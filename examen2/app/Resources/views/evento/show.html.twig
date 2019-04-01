@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Evento</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ evento.id }}</td>
+            </tr>
+            <tr>
+                <th>Titulo</th>
+                <td>{{ evento.titulo }}</td>
+            </tr>
+            <tr>
+                <th>Descripción</th>
+                <td>{{ evento.descripcion }}</td>
+            </tr>
+            <tr>
+                <th>Activo</th>
+                <td>{{ evento.activo }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('evento_index') }}">Volver</a>
+        </li>
+        <li>
+            <a href="{{ path('evento_edit', { 'id': evento.id }) }}">Editar</a>
+        </li>
+    </ul>
+{% endblock %}
